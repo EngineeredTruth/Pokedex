@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html ng-app="pokedex">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="reset.css">
-  </head>
-  <body ng-controller="pokeCtrl">
+</head>
+
+<body ng-controller="pokeCtrl">
     <header>
-      <h1>POKEMON</h1>
+        <h1>POKEMON</h1>
     </header>
     <section class="pokedex">
-      <div class="search">
-        <h2>Search Pokemon</h2>
-        <br>
-        <form ng-submit="pokeData(number)">
-          <input ng-model="number" type="text" placeholder="Search pokemon">
-        </form>
-      </div>
-      {{pokeName}}
-      <div class="pokedex-pic">
+        <div class="search">
+            <h2>Search Pokemon</h2>
+            <br>
+            <form ng-submit="pokeData(number)">
+                <input ng-model="number" type="text" placeholder="Search pokemon">
+            </form>
+        </div>
+        {{pokeName}}
+        <div class="pokedex-pic">
+            <img id='pic' src="{{pokepic}}" alt="pokemon" />
+            <div class='stats'>
+                <ul>
+                <li>{{pokeAbilities}}</li>
+                <li>{{pokeMove1}}</li>
+                <li>{{pokeMove2}}</li>
+              </ul>
 
-      </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-      <img src="{{pokepic}}" alt="pokemon" />
+
     </footer>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="./js/app.js"></script>
-  <script src="./js/pokeCtrl.js"></script>
-  <script src="./js/pokeServ.js"></script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/pokeCtrl.js"></script>
+<script src="./js/pokeServ.js"></script>
+
 </html>
